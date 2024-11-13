@@ -35,16 +35,4 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-    'facebook' => [
-        'client_id' => '281202415620282',
-        'client_secret' => '73d69d7e25271bb49e922841ee0d9709',
-        'redirect' => 'http://localhost:8000/login/callback/facebook',
-    ],
-
-    'google' => [
-        'client_id' => '400524927179-pqlos3je439cbg9balh8lh3mtiph4i0d.apps.googleusercontent.com',
-        'client_secret' => 'Ns0jNXUE1IcVaiLCmmp4dSFM',
-        'redirect' => 'http://localhost:8000/login/callback/google',
-    ],
-
 ];

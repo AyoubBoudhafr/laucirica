@@ -4,9 +4,6 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Notificacion;
-use App\Preferencias;
-use App\Recibo;
 
 class User extends Authenticatable
 {
@@ -29,21 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function LineasProducto(){
-        return $this->hasMany(LineaProducto::class);
-    }
-
-    public function recibosEmitidos(){
-        return $this->hasMany(Recibo::class);
-    }
-
-    public function notificaciones(){
-        return $this->belongsToMany(Notificacion::class, 'notificacion_usuarios', 'usuario_id', 'notificacion_id');
-    }
-
-    public function preferencias(){
-        return $this->hasOne(Preferencias::class, 'usuario_id');
-    }
-
 }
